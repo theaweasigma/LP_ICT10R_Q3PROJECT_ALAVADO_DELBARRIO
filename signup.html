@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>Sign up</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .nav{
+            background-color: #7d7d7d;
+            width: 100%;
+            padding: 10px;
+            color: white;
+        }
+
+        .container {
+            background-color: #8e8e8e;
+            padding: 20px;
+            border: 3px solid rgb(117, 117, 117);
+            border-radius: 15px;
+            width: 30%;
+        }
+        .btn{
+            background-color: rgb(113, 113, 113);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #565656;">
+            <a class="navbar-brand" href="signup.html"> Intramurals SY 2025-2026</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="teamchecker.html">Team checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teamlist.html">Clubs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <br><br>
+    
+<div class="container">
+    <div>
+        <h3 class="custom-text mb-3 text-center">Create Account</h3>
+        <div class="mb-3">
+            <label for="customer" class="form-label">Username</label>
+            <input type="text" class="form-control" id="customer" placeholder="Enter your Username">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Password</label>
+            <input type="password" class="form-control" id="address" placeholder="Enter your Password">
+        </div>
+    </div>
+     <div class="text-center">
+    <button class="btn" onclick="showMessage()">Sign up</button>
+    </div>
+
+    <p id="successMessage" class="text-center mt-3" style="display: none; color: pink; font-weight: bold;">
+        Account created. You may now log in using your credentials.</p>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("successMessage").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
