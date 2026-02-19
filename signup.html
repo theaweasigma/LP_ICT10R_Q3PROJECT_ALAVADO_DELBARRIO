@@ -10,34 +10,39 @@
     <title>Sign up</title>
 
     <style>
-        body {
-            margin: 0;
+         body {
+            background: linear-gradient(90deg, #C8C2AE, #7E5920, #3C1518);
+            font-family: 'Times New Roman', serif;
         }
-
-        .nav{
-            background-color: #7d7d7d;
-            width: 100%;
-            padding: 10px;
-            color: white;
-        }
-
-        .container {
-            background-color: #8e8e8e;
-            padding: 20px;
-            border: 3px solid rgb(117, 117, 117);
-            border-radius: 15px;
-            width: 30%;
-        }
-        .btn{
-            background-color: rgb(113, 113, 113);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
+        .navbar-nav .nav-link {
+            background: linear-gradient(135deg, #7E5920 0%, #54494B 100%);
+            color: white !important;
+            margin: 8px 5px;
+            border-radius: 25px;
+            padding: 8px 20px !important;
+            transition: all 0.3s ease;
             font-weight: bold;
-            margin-top: 10px;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        .navbar-nav .nav-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            border-color: #B98389;
+        }
+        .card {
+            background-color: #D1D3C4 !important;
+        }
+        .btn-success {
+            background-color: #840032 !important;
+            border-color: #840032 !important;
+        }
+        .btn-success:hover {
+            background-color: #62002a !important;
+            border-color: #62002a !important;
         }
     </style>
 </head>
@@ -94,3 +99,4 @@
 </body>
 
 </html>
+
