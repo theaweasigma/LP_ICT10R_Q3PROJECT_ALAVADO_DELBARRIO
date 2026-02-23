@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <title>What team are you?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>Sign up</title>
+
     <style>
         body {
             background: linear-gradient(90deg, #C8C2AE, #7E5920, #3C1518);
@@ -43,18 +44,24 @@
             background-color: #62002a !important;
             border-color: #62002a !important;
         }
+        .container {
+            background-color: #efefef;
+            padding: 20px;
+            border: 3px solid rgb(65, 46, 33);
+            border-radius: 15px;
+            width: 30%;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#">Team Assignment</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #565656;">
+            <a class="navbar-brand" href="signup.html"> Intramurals SY 2025-2026</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
                         <a class="nav-link" href="signup.html">Sign up</a>
                     </li>
                     <li class="nav-item">
@@ -67,112 +74,34 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-5">
-        <div class="card p-5">
-            <h1 class="text-center mb-4">ARE YOU READY FOR YOUR TEAM???!!!˚˖𓍢ִ໋❀</h1>
-            
-            <form id="teamForm">
-                <div class="mb-4">
-                    <label class="form-label fw-bold">Are you done with the online registration?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="registration" id="reg_yes" value="yes" checked>
-                        <label class="form-check-label" for="reg_yes">Yes</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="registration" id="reg_no" value="no">
-                        <label class="form-check-label" for="reg_no">No</label>
-                    </div>
-                </div>
-
-                <div class="mb-4">
-                    <label class="form-label fw-bold">Do you have the medical clearance from the clinic?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="medical" id="med_yes" value="yes" checked>
-                        <label class="form-check-label" for="med_yes">Yes</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="medical" id="med_no" value="no">
-                        <label class="form-check-label" for="med_no">No</label>
-                    </div>
-                </div>
-
-                <div class="mb-4">
-                    <label for="gradeSection" class="form-label fw-bold">What's your Grade & Section?</label>
-                    <select class="form-select mb-2" id="grade">
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                    </select>
-                    <select class="form-select" id="section">
-                        <option>Emerald</option>
-                        <option>Sapphire</option>
-                        <option>Ruby</option>
-                        <option>Topaz</option>
-                        <option>Luna</option>   
-                        <option>Amorsolo</option>
-                        <option>Jose</option>
-                        <option>Tinio</option>    
-                    </select>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label fw-bold">Accept terms & conditions</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="terms" required>
-                        <label class="form-check-label" for="terms">I agree to the terms</label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success w-100 fw-bold">Sign up</button>
-            </form>
-            <div id="teamAssignment" class="mt-4 text-center d-none">
-                <p class="fs-5" id="teamMessage"></p>
-            </div>
-            <div id="result" class="mt-4 text-center d-none">
-                <p class="fs-5" id="resultMessage">Congratulations! You are part of the team 🐯</p>
-            </div>
+    
+    <br><br>
+    
+<div class="container">
+    <div>
+        <h3 class="custom-text mb-3 text-center">Create Account</h3>
+        <div class="mb-3">
+            <label for="customer" class="form-label">Username</label>
+            <input type="text" class="form-control" id="customer" placeholder="Enter your Username">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Password</label>
+            <input type="password" class="form-control" id="address" placeholder="Enter your Password">
         </div>
     </div>
-    <script>
-        function getTeam(grade, section) {
-            const teamMap = {
-                "7-Emerald": "Blue Bears",
-                "7-Ruby": "Red Bulldogs",
-                "7-Sapphire": "Red Bulldogs",
-                "7-Topaz": "Green Hornets",
-                "8-Emerald": "Blue Bears",
-                "8-Ruby": "Red Bulldogs",
-                "8-Sapphire": "Yellow Tigers",
-                "8-Topaz": "Green Hornets",
-                "9-Emerald": "Blue Bears",
-                "9-Ruby": "Red Bulldogs",
-                "9-Sapphire": "Yellow Tigers",
-                "9-Topaz": "Green Hornets",
-                "10-Emerald": "Blue Bears",
-                "10-Ruby": "Red Bulldogs",
-                "10-Sapphire": "Yellow Tigers",
-                "10-Topaz": "Green Hornets",
-                "11-Luna": "Blue Bears",
-                "11-Amorsolo": "Red Bulldogs",
-                "10-Tinio": "Yellow Tigers",
-                "12-Jose": "Green Hornets"
-            };
-            return teamMap[`${grade}-${section}`] || "Blue Bears";
-        }
+     <div class="text-center">
+    <button class="btn" onclick="showMessage()">Sign up</button>
+    </div>
 
-        document.getElementById('teamForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const grade = document.getElementById('grade').value;
-            const section = document.getElementById('section').value;
-            const team = getTeam(grade, section);
-            document.getElementById('resultMessage').textContent = `Congratulations! You are part of the ${team} 🐯`;
-            document.getElementById('result').classList.remove('d-none');
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDzJ7CAJlqwzM2FtvgHweA0061GAL5gI64Z5ZoMZamLT0Y4IlRH9sENDuU" crossorigin="anonymous"></script>
+    <p id="successMessage" class="text-center mt-3" style="display: none; color: pink; font-weight: bold;">
+        Account created. You may now log in using your credentials.</p>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("successMessage").style.display = "block";
+    }
+</script>
+
 </body>
 </html>
-
-
-
